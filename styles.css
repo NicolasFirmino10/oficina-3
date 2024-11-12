@@ -1,22 +1,36 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
 }
 
 nav {
   display: flex;
-  height: 80px;
-  padding: 20px;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  height: auto;
+  padding: 20px;
   background-color: aqua;
+}
+
+nav h1, nav p {
+  text-align: center;
 }
 
 ul {
   display: flex;
-  width: 300px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
   list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 0;
 }
 
 a {
@@ -26,31 +40,67 @@ a {
 
 img {
   width: 100%;
-}
-
-/*Home*/
-
-.home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 100%;
+  height: auto;
   margin-top: 20px;
 }
-
-/*Motivos*/
 
 .motivos {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/*Expectativas*/
-
-.expectativas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+.motivos h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
+
+.motivos p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+
+
+
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav h1, nav p {
+    text-align: left;
+  }
+
+  ul {
+    justify-content: flex-start;
+  }
+
+  .motivos {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .motivos h1 {
+    font-size: 26px;
+  }
+
+  .motivos p {
+    font-size: 20px;
+  }
+
+  .motivos img {
+    width: 100%;
+  }
+}
+
+
+
